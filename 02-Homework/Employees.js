@@ -18,11 +18,9 @@ inquirer
         message: "What position for new employee?",
         choices: ["Owner", "Sales", "Marketing", "Human Resources", "Operations", "Engineer"],
     },
-
-
   ])
   .then((answer) => {
     console.log("Welcome New Employee " + answer.first_name, answer.last_name);
-    console.log("Title: " + answer.position)
+    console.log("Title: " + answer.title)
   });
 
