@@ -1,31 +1,29 @@
 DROP DATABASE IF EXISTS Employees;
-
 CREATE DATABASE Employees;
-
 USE Employees;
+SHOW TABLES;
 
 
--- CREATE TABLE *Employees* 
+-- CREATES TABLE *Employees* 
 CREATE TABLE Employees (
-  ID INTEGER(7) AUTO_INCREMENT NOT NULL,
+  ID INT AUTO_INCREMENT NOT NULL,
   first_name VARCHAR(30),
   last_name VARCHAR(30),
-  role_id INTEGER(7),
-  manager_id INTEGER(7),
+  role_id INT,
+  manager_id INT,
   PRIMARY KEY (ID)
 )
 
--- CREATE TABLE *Role*
-ID INTEGER(7) 
+
+-- CREATES TABLE *roles*
+CREATE TABLE roles (
+ department_id INT AUTO_INCREMENT NOT NULL,
+ title VARCHAR(30),
+ salary DECIMAL(8,2),
+ PRIMARY KEY (department_id)
+)
 
 
--- CREATE TABLE *role*
---id - INT PRIMARY KEY - NOT NULL
---title - VARCHAR(30) to hold role title
---salary - DECIMAL to hold role salary
---department_id - INT to hold reference to department role belongs to
-
-
--- CREATE TABLE *department*
---id - INT PRIMARY KEY - NOT NULL
---name - VARCHAR(30) to hold department name
+-- SHOW tables in database
+SELECT * FROM employees; 
+SELECT * FROM roles;
