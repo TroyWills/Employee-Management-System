@@ -1,5 +1,4 @@
 var inquirer = require('inquirer');
-const cTable = require('console.table');
 
 inquirer
   .prompt([

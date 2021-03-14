@@ -1,6 +1,8 @@
+// dependencies 
 var mysql = require("mysql"); 
 var inquirer = require("inquirer");
 
+// initialize the connection to workbench
 var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
@@ -9,6 +11,7 @@ var connection = mysql.createConnection({
   database: "Employees"
 });
 
+// view status of connection in console.log
 connection.connect(function(err) {
     if (err) {
       console.error('error connecting: ' + err.stack);
