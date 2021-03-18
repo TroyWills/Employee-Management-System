@@ -1,6 +1,5 @@
 var inquirer = require('inquirer');
-
-
+const connection = require("../db/connection");
 
 // PROMPT to add a new employee
 inquirer
@@ -32,21 +31,5 @@ inquirer
     console.log("Welcome New Employee " + answer.first_name, answer.last_name);
     console.log("Department: " + answer.department);
     console.log("Title: " + answer.title);
-    const newEmployee = (answer.first_name + ", " + answer.last_name + ", " + answer.department + ", " + answer.title)
-    console.log(newEmployee);
   });
-
-function addEmployee() {
-  return this.connection.query("INSERT INTO employee (first_name, last_name, department, title) VALUES (?, ?, ?, ?)", [first_name, last_name, department, title]
-}
-
-  // .prompt([
-  //   {
-  //     name: "validate",
-  //     type: "list",
-  //     message: "is the above correct?",
-  //     choices: ["Yes", "No"]
-  //   }
-  // ])
-
 
