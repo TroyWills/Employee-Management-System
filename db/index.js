@@ -1,15 +1,25 @@
 const connection = require("./connection");
 
-class DB {
+class Database {
     constructor(connection) {
         this.connection = connection;
     }
 
-    // Method to find all employees 
-    readAllEmployees() {
-        // return this.connection.query("SELECT * FROM employees");
-        console.log("are we here")
-      }
-};
+    addEmployee(first_name, last_name, department, position) {
+        return this.connection.query("INSERT INTO employees (first_name, last_name, department, position) VALUES (?, ?, ?, ?);", [first_name, last_name, department, position])
+    }
 
-module.exports = new DB(connection);
+    addRole(department, position, salary) {
+        return this.connection.query("INSERT INTO roles (department, position, salary) VALUES (?, ?, ?);", [department, position, salary])
+    }
+
+    readAllEmployees() {
+        return this.connection.query("SELECT * FROM employees");
+    }
+
+    readAllRoles() {
+        return this.connection.query("SELECT * FROM roles")
+    }
+}
+
+module.exports = new Database(connection);

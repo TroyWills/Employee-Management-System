@@ -21,7 +21,7 @@ inquirer
       choices: ["Owner", "Sales", "Human Resources", "Operations", "Engineer"],
     },
     {
-      name: "title",
+      name: "position",
       type: "input",
       message: "What position for new employee?",
     },

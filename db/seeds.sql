@@ -1,16 +1,16 @@
 
 -- INSERTED DATA into employees table
-INSERT INTO employees (first_name, last_name, title) values 
-("Troy", "Wills", "Owner"),
-("Sarah", "Rinehart", "Sales"),
-("Rizzo", "Wills", "Sales"),
-("Bella", "Wills", "Sales"),
-("Tom", "Brady", "Operations"),
-("Patrick", "Mahomes", "Operations"),
-("Mitchell", "Trubisky", "Operations"),
-("Kris", "Bryant", "Engineer"),
-("Javier", "Baez", "Engineer"),
-("Roger", "Goodell", "Human Resources"); 
+INSERT INTO employees (first_name, last_name, department, position) values 
+("Troy", "Wills", "Owner", "Owner"),
+("Sarah", "Rinehart", "Sales", "Sales Manager"),
+("Rizzo", "Wills", "Sales", "Sales Lead"),
+("Bella", "Wills", "Sales", "Sales Lead"),
+("Tom", "Brady", "Operations", "Operations Manager"),
+("Patrick", "Mahomes", "Operations", "Operations Assistant"),
+("Mitchell", "Trubisky", "Operations", "Operations Assistant"),
+("Kris", "Bryant", "Engineer", "Engineering Manager"),
+("Javier", "Baez", "Engineer", "Engineering Lead"),
+("Roger", "Goodell", "Human Resources", "Human Resources Manager"); 
 
 -- INSERTED DATA INTO roles table
 INSERT INTO roles (title, salary) values 
