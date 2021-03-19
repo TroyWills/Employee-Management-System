@@ -1,7 +1,7 @@
-Instruction for use:
+Employee Management System 
 
-1) Create package.json running 'npm init' in cmd prompt 
-2) install necessary depencies running 'npm install mysql inquirer'
-3) ensure connection to MYSQL workbench is working properly - run cmd 'npm run watch'
-4) add new employees via the command line - 'npm run script' 
+Command line application that will allow users to add new employees or roles 
 
+Instructions for use: 
+    -`npm i` to install dependencies 
+    -run in bash `node index.js` to kick off application 
